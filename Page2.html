@@ -254,63 +254,40 @@
     <div class="row">
         <div class="columnleft">
             <div class="card">
-                <h2>This is a left column</h2>
-                <h3>made using divs</h3>
-                <p>            
-                /* Responsive layout */ <br>
-                /* makes the three columns stack on top of each other instead of next to each other */<br>
-                @media screen and (max-width: 800px) {<br>
-                </p>
-                <p>
-                    .columnleft,<br>
-                    .columnright {<br>
-                    width: 100%;<br>
-                    padding: 0;<br>
-                    }<br>
-                }<br>
-                </p>
+                <h2>P2- Client side</h2>
+                
+                <p>User’s choice of device- The website will load faster if the user is on a high end PC compared to a phone or tablet because it has a higher processing speed, more RAM, a larger cache, and a more stable connection to the Wi-Fi. </p>
 
+                <p>Hardware specification of the device- The user computer specification may be impacting the performance of a website; their RAM may be overloaded for example they could have software running which takes up most of the computers power so even loading up a website can be really slow.</p>
+                <p>It can also be down to the cache memory which is memory that is temporarily stored on the computer which are need to make the website run for example, cookies, passwords and other scripts that the website needs to load before the user is able to view the page. The processor speed will be something that impacts the performance of the website as a faster processor can perform tasks faster which means it’s able to process the website faster.</p>
 
-                <p><var>Responsive Layouts</var></p>
-                <p>What are responsive layouts? They are used to respond to the size of the website, so if i was to
-                    shrink the size of my website the columns dont go all over the place instead they stack. <var>Try
-                        it</var>. </p>
-                <p>In my example the responsive layout will start to happen when the webpage is lower than 800px. The
-                    width is set to make sure my columns still take up the page rather than staying the same size and
-                    being too big.</p>
+                <p>The browser being used- The browser may be impacting the user’s performance as certain browsers perform better than others, this can be down to which is best suited for internet browsing.</p>
             </div>
             
 
             <!--adds conent to middle column-->
             <div class="card">
-                <h2> CSS Box Model</h2>
-                <li>The main conent (middle) is where the text and images appear.</li>
-                <li> The Paddiing clears an area around the main content.</li>
-                <li> The border is around the padding and main content. </li>
-                <li>The Margin is empty space around the border which has no colour.</li>
-                <div class="image">
-                    <img src="css_box_model_chrome.png" alt="Failed to display image">
-                </div>
-                <p>This is used to make sure the content fits on the page and so that the content on the page is seperated.</p>
-                <p>image from https://www.vikingcodeschool.com/html5-and-css3/the-css-box-model</p>
-                <p>RESUB- on my site this is used with each column, so the main content is inside the box and the padding divides each box so they don't overlap.</p>
+                <h2> P2- Server Side</h2>
+                
+                <P>Web server capacity- as a website is stored on servers it has a limit to how much data it can send and receive at one time, when loading up a website the user’s computer will be sending and receiving information from the web server, with a higher server capacity the server can send and receive more data at one time which will allow for web pages to load up faster.</P>
+
+                <p>Available bandwidth- this is the amount of data traffic that can be downloaded from a website per second, this can be impacted if more people are using the web server as users will be capped at the amount of data they can download per second, if there are not many people on the web server then the download speed will be much higher as the download speed will not be capped due to traffic.</p>
+
+                <p>Executions to be performed before the page is loaded up- each page has to execute a number of actions before being able to completely display the web page to the user, the more actions that need to be performed the longer it will take until the webpage is completely loaded up, which impacts the performance of the website.</p>
+
+                <p>Number of hits- The amount of people on the web page can affect the speed, if lots of people are on the web page then the server can overload and slow down the web pages performance.</p>
             </div>
         </div>
 
         <!--This Adds content to the class columnright-->
         <div class="columnright">
             <div class="card">
-               <h3>This is The right column</h3>
+               <h3>D1- Scripts not working</h3>
                 <div class="image">
                     <img src="card.PNG" alt="Failed to display image">
                 </div>
-                <var>
-                    <p>What i used .card for</p>
-                </var>
-                <p><b>.card</b> gives the website the effect of a card for the background of each column. To
-                    implement this into this column i simply put the card class inside the columnright class.</p>
-                <p>RESUB- CSS Selectors, there are 5 different types of selectors. simple which selects elements bases on name,id and class. Combinator which select elements based on relationships between then. Pseudi-class which select elements based on a certain state, Pseudo elements which select and style part of an elemtn and an attribute selector which selects elements baseed on an attribute or attribute value</p>
-                <p>Credit to w3schools: https://www.w3schools.com/CSS/css_selectors.asp </p>
+                <p>Older browsers may not support scripts. For example, in the past for internet explorer, JavaScript was turned off by default. To fix this issue an option would be to comment out the scripts, so the code does not try and get executed. However, this is also a client side issue as JavaScript can be turned on through internet explorers setting so another fix would be having a message telling the user that the site uses JavaScript with a link explaining how to turn it on. Another way is if the web developer uses browser detection to call in different external CSS or javascript depending on the browser for example, IF browser A use Code for browser A </p>
+                <P> A better way to do this because there are so many browsers out there and some can get created is check for the features the browser contains for example. IF Feature A then use code for feature A.</P>
             </div>
 
 
