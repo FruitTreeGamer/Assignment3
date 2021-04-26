@@ -1,0 +1,205 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    nav {
+      padding: 12px 16px;
+      background-color: lightblue;
+      position: relative;
+      animation-name: example;
+      animation-duration: 10s;
+      overflow: hidden;
+    }
+  </style>
+  <script>
+    document.cookie = "username=Cameron Taylor";
+    function setCookie(cname, cvalue, exdays) {
+      var d = new Date();
+      d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+      var expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function getCookie(cname) {
+      var name = cname + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var ca = decodedCookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+
+    function checkCookie() {
+      var user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) {
+          setCookie("username", user, 30);
+        }
+      }
+    }
+    function clicked() {
+
+      alert('Thisisafunctioncall');
+    }
+  </script>
+  <style type="text/css">
+    body {
+      background-color: lightsalmon;
+      text-align: center;
+    }
+  </style>
+  <script type="text/javascript" src="tipcalculator.js"></script>
+
+</head>
+
+<body onload="checkCookie()"></body>
+
+<body>
+  <h1> Java Script Intro</h1>
+
+
+  <div class="topnav">
+    <nav></nav>
+    <a class="active" href="#home">Home</a>
+    <a href="#Code">Code</a>
+    <a href="index.html" style="float:right">Lets go back to page 1</a>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+    </div>
+  </div>
+  </div>
+
+  <p id="intro">HTML content can be changed with java script.</p>
+
+  <button type="button" onclick='document.getElementById("intro").innerHTML = "Hello Person"'>Click Me!</button>
+
+
+  <button onclick='window.alert("ButtonClick");'>Hello There.</button>
+  <button onclick='clicked();'> click here.</button>
+
+  <p>My Logo</p>
+
+  <button onclick="document.getElementById('myImage').src='CWAlogo.png'">Change image</button>
+
+  <img id="myImage" src="CWAlogo2.png">
+
+  <button onclick="document.getElementById('myImage').src='CWAlogo2.png'">Change image</button>
+  <div id="container">
+    <h1>Tip Calculator</h1>
+    <div id="calculator">
+      <form>
+        <p>How much was your bill?
+          <p>
+            $ <input id="billamt" type="text" placeholder="Bill Amount">
+
+            <p>How was your service?
+              <p>
+                <select id="serviceQual">
+                  <option disabled selected value="0">-- Choose an Option --</option>
+                  <option value="0.3">30&#37; &#45; Outstanding</option>
+                  <option value="0.2">20&#37; &#45; Good</option>
+                  <option value="0.15">15&#37; &#45; It was OK</option>
+                  <option value="0.1">10&#37; &#45; Bad</option>
+                  <option value="0.05">5&#37; &#45; Terrible</option>
+                </select>
+
+      </form>
+      <p>How many people are sharing the bill?</p>
+      <input id="peopleamt" type="text" placeholder="Number of People"> people
+      <button type="button" id="calculate">Calculate!</button>
+    </div>
+    <!--calculator end-->
+    <div id="totalTip">
+      <sup>$</sup><span id="tip">0.00</span>
+      <small id="each">each</small>
+    </div>
+    <!--totalTip end-->
+
+  </div>
+  <!--container end-->
+
+  <script type="text/javascript" src="tipcalculator.js"></script>
+
+  <script>
+    //Calculate Tip
+    function calculateTip() {
+      var billAmt = document.getElementById("billamt").value;
+      var serviceQual = document.getElementById("serviceQual").value;
+      var numOfPeople = document.getElementById("peopleamt").value;
+
+      //validate input
+      if (billAmt === "" || serviceQual == 0) {
+        alert("Please enter values");
+        return;
+      }
+      //Check to see if this input is empty or less than or equal to 1
+      if (numOfPeople === "" || numOfPeople <= 1) {
+        numOfPeople = 1;
+        document.getElementById("each").style.display = "none";
+      } else {
+        document.getElementById("each").style.display = "block";
+      }
+
+      //Calculate tip
+      var total = (billAmt * serviceQual) / numOfPeople;
+      //round to two decimal places
+      total = Math.round(total * 100) / 100;
+      //next line allows us to always have two digits after decimal point
+      total = total.toFixed(2);
+      //Display the tip
+      document.getElementById("totalTip").style.display = "block";
+      document.getElementById("tip").innerHTML = total;
+
+    }
+
+    //Hide the tip amount on load
+    document.getElementById("totalTip").style.display = "none";
+    document.getElementById("each").style.display = "none";
+
+    //click to call function
+    document.getElementById("calculate").onclick = function () {
+      calculateTip();
+
+    };
+
+  </script>
+
+</body>
+
+<body>
+  <script>
+    var Games, text, flen; i;
+    var Games = ["Siege", "Valheim", "Minecraft"];
+    flen = Games.length;
+
+    text = "<ul>";
+    for (i = 0; i < flen; i++) {
+      text += "<li>" + Games[i] + "</li>"
+    }
+    text += "<ul>";
+
+    document.getElementById("demo").innerHTML = text;
+  </script>
+
+  <p id="ident"></p>
+
+  <script>
+    document.getElementById("ident").innerHTML = navigator.appVersion;
+  </script>
+
+</body>
+
+</html>
